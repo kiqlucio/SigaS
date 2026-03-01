@@ -1,0 +1,31 @@
+:root {
+  /* Paleta Global Consolidada */
+  --primary: #2563EB;
+  --primary-light: #EBF3FF;
+  --success: #22C55E;
+  --warning: #D97706;
+  --danger: #EF4444;
+  --text-dark: #111827;
+  --text-medium: #374151;
+  --text-light: #6B7280;
+  --placeholder: #9CA3AF;
+  --border-light: #E5E7EB;
+  --border-dark: #D1D5DB;
+  --bg-main: #F8F9FB;
+  --bg-card: #FFFFFF;
+
+  /* Tipografia (Usando Inter via Google Fonts) */
+  --font-family: 'Inter', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-family);
+}
+
+body {
+  background-color: var(--bg-main);
+  color: var(--text-medium);
+}

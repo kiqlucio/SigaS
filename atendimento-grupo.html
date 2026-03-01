@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SigaS - Atendimento em Grupo</title>
+    <link rel="stylesheet" href="./assets/css/login.css">
+    <link rel="stylesheet" href="./assets/css/layout.css">
+    <link rel="stylesheet" href="./assets/css/telas.css">
+</head>
+<body>
+
+<div class="app-container">
+    <aside class="sidebar">
+        <div class="sidebar-logo">
+            <div class="logo-icon">S</div>
+            <span>SigaS</span>
+        </div>
+        
+        <a href="dashboard.html" class="nav-item">Dashboard</a>
+        <a href="atendimento-individual.html" class="nav-item">Atendimentos</a>
+        <a href="atendimento-grupo.html" class="nav-item active">Grupos</a>
+        <a href="#" class="nav-item">Participantes</a>
+        <a href="#" class="nav-item">Relatórios</a>
+    </aside>
+
+    <div class="main-wrapper">
+        <main class="content-area">
+            
+            <div class="page-header">
+                <div class="page-title">
+                    <h1>Atendimento em Grupo</h1>
+                    <p>Gerenciamento e registro de serviços coletivos</p>
+                </div>
+                <button class="btn-primary-header">+ Novo Grupo</button>
+            </div>
+
+            <div class="filter-bar">
+                <div class="filter-group" style="flex: 2;">
+                    <label>Buscar Grupo</label>
+                    <input type="text" class="filter-input" placeholder="Nome do grupo...">
+                </div>
+                <div class="filter-group">
+                    <label>Tipo de Serviço</label>
+                    <select class="filter-input">
+                        <option>Todos os tipos</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label>Técnico Responsável</label>
+                    <select class="filter-input">
+                        <option>Qualquer técnico</option>
+                    </select>
+                </div>
+                <div class="filter-actions">
+                    <button class="btn-outline">Limpar</button>
+                    <button class="btn-apply">Aplicar Filtros</button>
+                </div>
+            </div>
+
+            <div class="table-container">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Grupo</th>
+                            <th>Tipo</th>
+                            <th>Membros</th>
+                            <th>Responsável</th>
+                            <th>Última Reunião</th>
+                            <th>Status</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Grupo de Idosos Alegria</strong><br><span style="color:#6B7280; font-size:11px;">ID: GRP-00124</span></td>
+                            <td><span class="tag tag-conviver">CONVIVER</span></td>
+                            <td>👥 15</td>
+                            <td>Ana Souza</td>
+                            <td>12 Out 2023</td>
+                            <td><span class="status-dot ativo">Ativo</span></td>
+                            <td>✏️ 📄</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Jovens do Futuro</strong><br><span style="color:#6B7280; font-size:11px;">ID: GRP-00135</span></td>
+                            <td><span class="tag tag-socio">SOCIOEDUCATIVO</span></td>
+                            <td>👥 12</td>
+                            <td>Carlos Lima</td>
+                            <td>10 Out 2023</td>
+                            <td><span class="status-dot ativo">Ativo</span></td>
+                            <td>✏️ 📄</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Apoio Familiar</strong><br><span style="color:#6B7280; font-size:11px;">ID: GRP-00142</span></td>
+                            <td><span class="tag tag-paif">PAIF</span></td>
+                            <td>👥 08</td>
+                            <td>Ana Souza</td>
+                            <td>05 Out 2023</td>
+                            <td><span class="status-dot pausado">Pausado</span></td>
+                            <td>✏️ 📄</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="table-footer">
+                    <span>Mostrando 1-3 de 18 grupos registrados</span>
+                    <div class="pagination">
+                        <button class="page-btn">&lt;</button>
+                        <button class="page-btn active">1</button>
+                        <button class="page-btn">2</button>
+                        <button class="page-btn">3</button>
+                        <button class="page-btn">&gt;</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="summary-cards">
+                <div class="summary-card">
+                    <div class="summary-icon" style="background: #EBF3FF; color: #2563EB;">👥</div>
+                    <div class="summary-info">
+                        <span>Total de Participantes</span>
+                        <strong>142</strong>
+                    </div>
+                </div>
+                <div class="summary-card">
+                    <div class="summary-icon" style="background: #DCFCE7; color: #16A34A;">📅</div>
+                    <div class="summary-info">
+                        <span>Reuniões este mês</span>
+                        <strong>28</strong>
+                    </div>
+                </div>
+                <div class="summary-card">
+                    <div class="summary-icon" style="background: #FEF2F2; color: #EF4444;">⚠️</div>
+                    <div class="summary-info">
+                        <span>Planos Vencendo</span>
+                        <strong>05</strong>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+    </div>
+</div>
+</body>
+</html>

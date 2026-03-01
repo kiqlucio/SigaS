@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SigaS - Atendimento Individual</title>
+    <link rel="stylesheet" href="./assets/css/login.css">
+    <link rel="stylesheet" href="./assets/css/layout.css">
+    <link rel="stylesheet" href="./assets/css/telas.css">
+</head>
+
+<body>
+
+    <div class="app-container">
+        <aside class="sidebar">
+            <div class="sidebar-logo">
+                <div class="logo-icon">S</div>
+                <span>SigaS</span>
+            </div>
+
+            <a href="dashboard.html" class="nav-item">Dashboard</a>
+            <a href="atendimento-individual.html" class="nav-item active">Atend. Individual</a>
+            <a href="#" class="nav-item">Beneficiários</a>
+            <a href="#" class="nav-item">Relatórios</a>
+            <a href="#" class="nav-item mt-auto">Configurações</a>
+        </aside>
+
+        <div class="main-wrapper">
+            <main class="content-area">
+
+                <div class="page-header">
+                    <div class="page-title">
+                        <h1>Atendimento Individual</h1>
+                    </div>
+                    <div style="display:flex; gap:16px;">
+                        <input type="text" class="filter-input" placeholder="Pesquisar..." style="width: 250px;">
+                        <button class="btn-primary-header">+ Novo Beneficiário</button>
+                    </div>
+                </div>
+
+                <div class="filter-bar">
+                    <div class="filter-group">
+                        <label>Técnico Responsável</label>
+                        <select class="filter-input">
+                            <option>Todos os técnicos</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label>Status</label>
+                        <select class="filter-input">
+                            <option>Todos</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label>Bairro</label>
+                        <select class="filter-input">
+                            <option>Todos os bairros</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label>Período</label>
+                        <input type="text" class="filter-input" placeholder="Últimos 30 dias">
+                    </div>
+                    <div class="filter-actions">
+                        <button class="btn-outline">≡ Mais Filtros</button>
+                    </div>
+                </div>
+
+                <div class="table-container">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Beneficiário</th>
+                                <th>CPF / NIS</th>
+                                <th>Prontuário</th>
+                                <th>Último Atendimento</th>
+                                <th>Técnico</th>
+                                <th>Status</th>
+                                <th>Ações</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="td-beneficiario">
+                                    <div class="avatar-circle" style="background:#FCA5A5;">M</div>
+                                    <div class="td-beneficiario-info">
+                                        <strong>Maria Oliveira Santos</strong>
+                                        <span>Bairro: Santa Luzia</span>
+                                    </div>
+                                </td>
+                                <td>123.456.789-00<br><span style="font-size:11px; color:#9CA3AF;">NIS:
+                                        12019283745</span></td>
+                                <td>#PAIF-0842/24</td>
+                                <td>12/05/2024</td>
+                                <td>Ricardo Silva</td>
+                                <td><span class="status-pill pill-acompanhamento">Acompanhamento Ativo</span></td>
+                                <td>🗂️ ✏️</td>
+                            </tr>
+                            <tr>
+                                <td class="td-beneficiario">
+                                    <div class="avatar-circle" style="background:#86EFAC;">J</div>
+                                    <div class="td-beneficiario-info">
+                                        <strong>João Paulo Silveira</strong>
+                                        <span>Bairro: Centro</span>
+                                    </div>
+                                </td>
+                                <td>987.654.321-11<br><span style="font-size:11px; color:#9CA3AF;">NIS:
+                                        16029384756</span></td>
+                                <td>#PAIF-0321/23</td>
+                                <td>05/05/2024</td>
+                                <td>Ana Beatriz</td>
+                                <td><span class="status-pill pill-ativo">Ativo</span></td>
+                                <td>🗂️ ✏️</td>
+                            </tr>
+                            <tr>
+                                <td class="td-beneficiario">
+                                    <div class="avatar-circle" style="background:#D1D5DB;">C</div>
+                                    <div class="td-beneficiario-info">
+                                        <strong>Carlos Eduardo Mendes</strong>
+                                        <span>Bairro: Vila Maria</span>
+                                    </div>
+                                </td>
+                                <td>445.556.778-99<br><span style="font-size:11px; color:#9CA3AF;">NIS:
+                                        13019284752</span></td>
+                                <td>#SCFV-0112/24</td>
+                                <td>22/04/2024</td>
+                                <td>Ricardo Silva</td>
+                                <td><span class="status-pill pill-encerrado">Encerrado</span></td>
+                                <td>🗂️ ✏️</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="table-footer">
+                        <span>Mostrando 1-3 de 24 beneficiários</span>
+                        <div class="pagination">
+                            <button class="page-btn">&lt;</button>
+                            <button class="page-btn active">1</button>
+                            <button class="page-btn">2</button>
+                            <button class="page-btn">3</button>
+                            <button class="page-btn">&gt;</button>
+                        </div>
+                    </div>
+                </div>
+
+            </main>
+        </div>
+    </div>
+</body>
+</html>

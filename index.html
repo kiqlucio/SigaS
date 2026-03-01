@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SigaS - Login</title>
+    <link rel="stylesheet" href="assets/css/login.css">
+</head>
+
+<body>
+
+    <main class="login-container">
+        <div class="login-card">
+
+            <div class="logo-container">
+                <div class="logo-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M3 21h18"></path>
+                        <path d="M3 10h18"></path>
+                        <path d="M5 6l7-3 7 3"></path>
+                        <path d="M4 10v11"></path>
+                        <path d="M20 10v11"></path>
+                        <path d="M8 14v3"></path>
+                        <path d="M12 14v3"></path>
+                        <path d="M16 14v3"></path>
+                    </svg>
+                </div>
+                <h1 class="logo-text">SigaS</h1>
+            </div>
+
+            <h2 class="login-title">Sistema Integrado de Gestão de Assistência<br>Social</h2>
+            <p class="login-subtitle">Acesse sua conta para continuar</p>
+
+            <hr class="divider">
+
+            <form id="loginForm">
+                <div class="input-group">
+                    <label for="email">Email ou Matrícula</label>
+                    <div class="input-wrapper">
+                        <span class="input-icon">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="12" cy="7" r="4"></circle>
+                            </svg>
+                        </span>
+                        <input type="text" id="email" placeholder="Seu acesso">
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <div class="label-row">
+                        <label for="password">Senha</label>
+                        <a href="#" class="forgot-password">Esqueci minha senha</a>
+                    </div>
+                    <div class="input-wrapper">
+                        <span class="input-icon">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                            </svg>
+                        </span>
+                        <input type="password" id="password" placeholder="••••••••">
+                        <span class="input-icon eye-icon">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                <circle cx="12" cy="12" r="3"></circle>
+                            </svg>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="login-options">
+                    <label class="checkbox-group">
+                        <input type="checkbox" id="remember">
+                        <span>Lembrar de mim</span>
+                    </label>
+                </div>
+
+                <button type="button" class="btn-primary"
+                    onclick="window.location.href='dashboard.html'">ENTRAR</button>
+            </form>
+
+            <hr class="divider">
+
+            <div class="realizacao-section">
+                <span class="realizacao-label">REALIZAÇÃO</span>
+                <div class="municipio-badge">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="4" y="2" width="16" height="20" rx="2" ry="2"></rect>
+                        <path d="M9 22v-4h6v4"></path>
+                        <path d="M8 6h.01"></path>
+                        <path d="M16 6h.01"></path>
+                        <path d="M12 6h.01"></path>
+                        <path d="M12 10h.01"></path>
+                        <path d="M12 14h.01"></path>
+                        <path d="M16 10h.01"></path>
+                        <path d="M16 14h.01"></path>
+                        <path d="M8 10h.01"></path>
+                        <path d="M8 14h.01"></path>
+                    </svg>
+                    MUNICÍPIO
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="login-footer">
+        <p>SigaS © 2024 - Todos os direitos reservados</p>
+        <div class="footer-links">
+            <span class="badge">VERSÃO 1.0</span>
+            <a href="#">Termos de Uso</a> <span class="separator">|</span> <a href="#">Privacidade</a>
+        </div>
+    </footer>
+
+    <script src="assets/js/auth.js"></script>
+</body>
+
+</html>
