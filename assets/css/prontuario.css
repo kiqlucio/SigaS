@@ -1,0 +1,139 @@
+/* assets/css/prontuario.css */
+
+/* Cabeçalho do Perfil (Resumo do Beneficiário) */
+.profile-header {
+    background: white;
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 24px;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin-bottom: 24px;
+}
+
+.profile-avatar {
+    width: 80px;
+    height: 80px;
+    background-color: #FCA5A5;
+    color: white;
+    font-size: 32px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.profile-info h2 {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--text-main);
+    margin-bottom: 8px;
+}
+
+.profile-badges {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.badge-info {
+    font-size: 13px;
+    color: var(--text-muted);
+    background: #F3F4F6;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-weight: 500;
+}
+
+/* Navegação das Abas (Tabs) */
+.tabs-nav {
+    display: flex;
+    gap: 8px;
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 24px;
+}
+
+.tab-btn {
+    background: none;
+    border: none;
+    padding: 12px 24px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-muted);
+    cursor: pointer;
+    border-bottom: 3px solid transparent;
+    transition: all 0.2s;
+}
+
+.tab-btn:hover {
+    color: var(--primary);
+}
+
+.tab-btn.active {
+    color: var(--primary);
+    border-bottom-color: var(--primary);
+}
+
+/* Conteúdo das Abas */
+.tab-pane {
+    display: none;
+    background: white;
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 24px;
+}
+
+.tab-pane.active {
+    display: block;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Linha do Tempo (Histórico) */
+.timeline {
+    border-left: 2px solid var(--border-color);
+    margin-left: 16px;
+    padding-left: 24px;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 32px;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -31px;
+    top: 0;
+    width: 12px;
+    height: 12px;
+    background: white;
+    border: 3px solid var(--primary);
+    border-radius: 50%;
+}
+
+.timeline-date {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 4px;
+}
+
+.timeline-content h4 {
+    font-size: 15px;
+    color: var(--text-main);
+    margin-bottom: 8px;
+}
+
+.timeline-content p {
+    font-size: 13px;
+    color: var(--text-muted);
+    line-height: 1.5;
+}

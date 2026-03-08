@@ -13,131 +13,260 @@
 <body>
 
     <div class="app-container">
+
         <aside class="sidebar">
             <div class="sidebar-logo">
-                <div class="logo-icon">S</div>
-                <span>SigaS</span>
+                <div class="logo-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="9" cy="7" r="4"></circle>
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                    </svg>
+                </div>
+                <span class="logo-text" style="color:var(--primary); font-size: 20px;">SigaS</span>
             </div>
 
-            <a href="dashboard.html" class="nav-item">Dashboard</a>
-            <a href="atendimento-individual.html" class="nav-item">Atend. Individual</a>
-            <a href="atendimento-grupo.html" class="nav-item active">Grupos</a>
-            <a href="#" class="nav-item mt-auto">Configurações</a>
-            <a href="index.html" class="nav-item" style="color: var(--danger);">Sair</a>
+            <div class="nav-section-title">PRINCIPAL</div>
+            <a href="dashboard.html" class="nav-item">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="3" y="3" width="7" height="7"></rect>
+                    <rect x="14" y="3" width="7" height="7"></rect>
+                    <rect x="14" y="14" width="7" height="7"></rect>
+                    <rect x="3" y="14" width="7" height="7"></rect>
+                </svg>
+                Dashboard
+            </a>
+
+            <div class="nav-section-title">GESTÃO</div>
+            <a href="cadastros.html" class="nav-item">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="8.5" cy="7" r="4"></circle>
+                    <line x1="20" y1="8" x2="20" y2="14"></line>
+                    <line x1="23" y1="11" x2="17" y2="11"></line>
+                </svg>
+                Cadastros
+            </a>
+            <a href="atendimento-individual.html" class="nav-item">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                    <polyline points="14 2 14 8 20 8"></polyline>
+                    <line x1="16" y1="13" x2="8" y2="13"></line>
+                    <line x1="16" y1="17" x2="8" y2="17"></line>
+                    <polyline points="10 9 9 9 8 9"></polyline>
+                </svg>
+                Atendimentos
+            </a>
+            <a href="atendimento-grupo.html" class="nav-item active" style="padding-left: 44px; font-size: 13px;">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    style="margin-right:8px; opacity:0.8; width:16px;">
+                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="9" cy="7" r="4"></circle>
+                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                </svg>
+                Atend. em Grupo
+            </a>
+            <a href="encaminhamentos.html" class="nav-item">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M2.5 2v6h6M21.5 22v-6h-6" />
+                    <path d="M22 11.5A10 10 0 0 0 3.2 7.2M2 12.5a10 10 0 0 0 18.8 4.2" />
+                </svg>
+                Encaminhamentos
+            </a>
+
+            <div class="nav-section-title">ANÁLISE</div>
+            <a href="relatorios.html" class="nav-item">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="20" x2="18" y2="10"></line>
+                    <line x1="12" y1="20" x2="12" y2="4"></line>
+                    <line x1="6" y1="20" x2="6" y2="14"></line>
+                </svg>
+                Relatórios
+            </a>
+
+            <a href="#" class="nav-item mt-auto" onclick="alert('Configurações Administrativas do sistema em breve.')">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="3"></circle>
+                    <path
+                        d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z">
+                    </path>
+                </svg>
+                Configurações
+            </a>
         </aside>
 
         <div class="main-wrapper">
+            <header class="topbar">
+                <div>
+                    <div style="font-size: 20px; font-weight: 700;">Atendimento em Grupo</div>
+                    <div style="font-size: 13px; color: var(--text-muted); margin-top: 4px;">Gerenciamento e registro de
+                        serviços coletivos</div>
+                </div>
+                <div style="display: flex; align-items: center; gap: 16px;">
+                    <button id="btnAbrirModalGrupo"
+                        style="background-color: var(--primary); color: white; border: none; padding: 10px 16px; border-radius: 6px; font-weight: 600; cursor: pointer; display: flex; align-items: center; gap: 8px;">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="12" y1="8" x2="12" y2="16"></line>
+                            <line x1="8" y1="12" x2="16" y2="12"></line>
+                        </svg>
+                        Novo Grupo
+                    </button>
+                    <button class="icon-btn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+                            <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+                        </svg>
+                    </button>
+                    <div class="user-profile">
+                        <div class="user-avatar" id="topbarUserAvatar"
+                            style="background-color: #0D8ABC; color: white; display: flex; align-items: center; justify-content: center; font-weight: bold;">
+                            US</div>
+                    </div>
+                </div>
+            </header>
+
             <main class="content-area">
 
-                <div class="page-header">
-                    <div class="page-title">
-                        <h1>Atendimento em Grupo</h1>
-                        <p>Gerenciamento e registro de serviços coletivos</p>
+                <div class="filter-bar"
+                    style="background: white; border: 1px solid var(--border-color); padding: 16px 24px; border-radius: 12px; margin-bottom: 24px; display: flex; gap: 24px; align-items: flex-end;">
+                    <div style="flex: 1;">
+                        <label
+                            style="font-size: 11px; font-weight: 600; color: var(--text-muted); text-transform: uppercase; margin-bottom: 8px; display: block;">BUSCAR
+                            GRUPO</label>
+                        <div class="search-bar"
+                            style="width: 100%; height: 40px; background: white; border: 1px solid var(--border-color); padding: 0 12px; display: flex; align-items: center; border-radius: 8px;">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--text-placeholder)"
+                                stroke-width="2">
+                                <circle cx="11" cy="11" r="8"></circle>
+                                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                            </svg>
+                            <input type="text" placeholder="Nome do grupo..."
+                                style="border: none; outline: none; margin-left: 8px; width: 100%; font-size: 14px;">
+                        </div>
                     </div>
-                    <button class="btn-primary-header">+ Novo Grupo</button>
-                </div>
 
-                <div class="filter-bar">
-                    <div class="filter-group" style="flex: 2;">
-                        <label>Buscar Grupo</label>
-                        <input type="text" class="filter-input" placeholder="Nome do grupo...">
-                    </div>
-                    <div class="filter-group">
-                        <label>Tipo de Serviço</label>
-                        <select class="filter-input">
+                    <div class="filter-group" style="flex: 1;">
+                        <label
+                            style="font-size: 11px; font-weight: 600; color: var(--text-muted); text-transform: uppercase; margin-bottom: 8px; display: block;">TIPO
+                            DE SERVIÇO</label>
+                        <select class="filter-input" style="width: 100%;">
                             <option>Todos os tipos</option>
                         </select>
                     </div>
-                    <div class="filter-group">
-                        <label>Técnico Responsável</label>
-                        <select class="filter-input">
+
+                    <div class="filter-group" style="flex: 1;">
+                        <label
+                            style="font-size: 11px; font-weight: 600; color: var(--text-muted); text-transform: uppercase; margin-bottom: 8px; display: block;">TÉCNICO
+                            RESPONSÁVEL</label>
+                        <select class="filter-input" style="width: 100%;">
                             <option>Qualquer técnico</option>
                         </select>
                     </div>
-                    <div class="filter-actions">
-                        <button class="btn-outline">Limpar</button>
-                        <button class="btn-apply">Aplicar Filtros</button>
+
+                    <div style="display: flex; gap: 12px;">
+                        <button class="btn-outline" style="height: 40px; padding: 0 16px;">Limpar</button>
+                        <button
+                            style="background-color: #EFF6FF; color: var(--primary); border: 1px solid #BFDBFE; padding: 0 16px; border-radius: 6px; font-weight: 600; cursor: pointer; height: 40px;">Aplicar
+                            Filtros</button>
                     </div>
                 </div>
 
-                <div class="table-container">
-                    <table class="data-table">
+                <div class="table-container"
+                    style="background: white; border: 1px solid var(--border-color); border-radius: 12px; overflow: hidden; margin-bottom: 24px;">
+                    <table class="data-table" style="width: 100%; border-collapse: collapse;">
                         <thead>
-                            <tr>
-                                <th>Grupo</th>
-                                <th>Tipo</th>
-                                <th>Membros</th>
-                                <th>Responsável</th>
-                                <th>Última Reunião</th>
-                                <th>Status</th>
-                                <th>Ações</th>
+                            <tr
+                                style="border-bottom: 1px solid var(--border-color); color: var(--text-muted); font-size: 11px; text-transform: uppercase;">
+                                <th style="padding: 16px 24px; text-align: left;">GRUPO</th>
+                                <th style="padding: 16px 24px; text-align: left;">TIPO</th>
+                                <th style="padding: 16px 24px; text-align: left;">MEMBROS</th>
+                                <th style="padding: 16px 24px; text-align: left;">RESPONSÁVEL</th>
+                                <th style="padding: 16px 24px; text-align: left;">ÚLTIMA REUNIÃO</th>
+                                <th style="padding: 16px 24px; text-align: left;">STATUS</th>
+                                <th style="padding: 16px 24px; text-align: center;">AÇÕES</th>
                             </tr>
                         </thead>
-                        <tbody>
-                            <tr>
-                                <td><strong>Grupo de Idosos Alegria</strong><br><span
-                                        style="color:#6B7280; font-size:11px;">ID: GRP-00124</span></td>
-                                <td><span class="tag tag-conviver">CONVIVER</span></td>
-                                <td>👥 15</td>
-                                <td>Ana Souza</td>
-                                <td>12 Out 2023</td>
-                                <td><span class="status-dot ativo">Ativo</span></td>
-                                <td>✏️ 📄</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Jovens do Futuro</strong><br><span
-                                        style="color:#6B7280; font-size:11px;">ID: GRP-00135</span></td>
-                                <td><span class="tag tag-socio">SOCIOEDUCATIVO</span></td>
-                                <td>👥 12</td>
-                                <td>Carlos Lima</td>
-                                <td>10 Out 2023</td>
-                                <td><span class="status-dot ativo">Ativo</span></td>
-                                <td>✏️ 📄</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Apoio Familiar</strong><br><span style="color:#6B7280; font-size:11px;">ID:
-                                        GRP-00142</span></td>
-                                <td><span class="tag tag-paif">PAIF</span></td>
-                                <td>👥 08</td>
-                                <td>Ana Souza</td>
-                                <td>05 Out 2023</td>
-                                <td><span class="status-dot pausado">Pausado</span></td>
-                                <td>✏️ 📄</td>
-                            </tr>
+                        <tbody id="tabelaGrupos">
+                            <!-- Injetado por main.js -->
                         </tbody>
                     </table>
-                    <div class="table-footer">
-                        <span>Mostrando 1-3 de 18 grupos registrados</span>
-                        <div class="pagination">
-                            <button class="page-btn">&lt;</button>
-                            <button class="page-btn active">1</button>
-                            <button class="page-btn">2</button>
-                            <button class="page-btn">3</button>
-                            <button class="page-btn">&gt;</button>
+
+                    <div
+                        style="padding: 16px 24px; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border-color);">
+                        <span style="font-size: 13px; color: var(--text-muted);">Mostrando grupos registrados</span>
+                        <div style="display: flex; gap: 8px;">
+                            <button
+                                style="border: 1px solid var(--border-color); background: white; width: 32px; height: 32px; border-radius: 4px;">&lt;</button>
+                            <button
+                                style="border: none; background: var(--primary); color: white; width: 32px; height: 32px; border-radius: 4px; font-weight: bold;">1</button>
+                            <button
+                                style="border: 1px solid var(--border-color); background: white; width: 32px; height: 32px; border-radius: 4px;">&gt;</button>
                         </div>
                     </div>
                 </div>
 
-                <div class="summary-cards">
-                    <div class="summary-card">
-                        <div class="summary-icon" style="background: #EBF3FF; color: #2563EB;">👥</div>
-                        <div class="summary-info">
-                            <span>Total de Participantes</span>
-                            <strong>142</strong>
+                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;">
+                    <div
+                        style="background: white; border: 1px solid var(--border-color); border-radius: 12px; padding: 20px; display: flex; align-items: center; gap: 16px;">
+                        <div
+                            style="width: 48px; height: 48px; background: #EFF6FF; color: var(--primary); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <span
+                                style="font-size: 11px; font-weight: 600; color: var(--text-muted); text-transform: uppercase;">Total
+                                de Participantes</span>
+                            <div style="font-size: 24px; font-weight: 700;">--</div>
                         </div>
                     </div>
-                    <div class="summary-card">
-                        <div class="summary-icon" style="background: #DCFCE7; color: #16A34A;">📅</div>
-                        <div class="summary-info">
-                            <span>Reuniões este mês</span>
-                            <strong>28</strong>
+
+                    <div
+                        style="background: white; border: 1px solid var(--border-color); border-radius: 12px; padding: 20px; display: flex; align-items: center; gap: 16px;">
+                        <div
+                            style="width: 48px; height: 48px; background: #DCFCE7; color: #22C55E; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                                <line x1="16" y1="2" x2="16" y2="6"></line>
+                                <line x1="8" y1="2" x2="8" y2="6"></line>
+                                <line x1="3" y1="10" x2="21" y2="10"></line>
+                            </svg>
+                        </div>
+                        <div>
+                            <span
+                                style="font-size: 11px; font-weight: 600; color: var(--text-muted); text-transform: uppercase;">Reuniões
+                                este Mês</span>
+                            <div style="font-size: 24px; font-weight: 700;">--</div>
                         </div>
                     </div>
-                    <div class="summary-card">
-                        <div class="summary-icon" style="background: #FEF2F2; color: #EF4444;">⚠️</div>
-                        <div class="summary-info">
-                            <span>Planos Vencendo</span>
-                            <strong>05</strong>
+
+                    <div
+                        style="background: white; border: 1px solid var(--border-color); border-radius: 12px; padding: 20px; display: flex; align-items: center; gap: 16px;">
+                        <div
+                            style="width: 48px; height: 48px; background: #FEF3C7; color: #D97706; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <line x1="12" y1="8" x2="12" y2="12"></line>
+                                <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                            </svg>
+                        </div>
+                        <div>
+                            <span
+                                style="font-size: 11px; font-weight: 600; color: var(--text-muted); text-transform: uppercase;">Planos
+                                Vencendo</span>
+                            <div style="font-size: 24px; font-weight: 700;">--</div>
                         </div>
                     </div>
                 </div>
@@ -145,6 +274,50 @@
             </main>
         </div>
     </div>
+
+    <!-- Modal Novo Grupo -->
+    <div class="modal-overlay" id="modalNovoGrupo">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Novo Grupo</h2>
+                <button class="btn-close" id="btnFecharModalGrupo">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="formNovoGrupo">
+                    <div class="form-group" style="margin-bottom: 16px;">
+                        <label>Nome do Grupo *</label>
+                        <input type="text" id="nomeGrupoInput" placeholder="Ex: Grupo de Idosos Alegria" required
+                            style="width: 100%; height: 42px; border: 1px solid var(--border-color); border-radius: 8px; padding: 0 12px;">
+                    </div>
+                    <div class="form-group" style="margin-bottom: 16px;">
+                        <label>Tipo de Serviço *</label>
+                        <select id="tipoGrupoInput" required
+                            style="width: 100%; height: 42px; border: 1px solid var(--border-color); border-radius: 8px; padding: 0 12px;">
+                            <option value="">Selecione...</option>
+                            <option value="Serviço de Convivência (SCFV)">Serviço de Convivência (SCFV)</option>
+                            <option value="PAIF">PAIF</option>
+                            <option value="PAEFI">PAEFI</option>
+                            <option value="Oficina Especial">Oficina Especial</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Capacidade (Vagas)</label>
+                        <input type="number" id="capacidadeGrupoInput" placeholder="Ex: 20"
+                            style="width: 100%; height: 42px; border: 1px solid var(--border-color); border-radius: 8px; padding: 0 12px;">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn-outline" id="btnCancelarModalGrupo">Cancelar</button>
+                <button type="submit" class="btn-apply" form="formNovoGrupo">Criar Grupo</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/layout.js"></script>
+    <script src="./assets/js/auth.js"></script>
+    <script src="./assets/js/main.js"></script>
 </body>
 
 </html>
+

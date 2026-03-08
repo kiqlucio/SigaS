@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SigaS - Relatórios Gerais</title>
+    <link rel="stylesheet" href="assets/css/login.css">
+    <link rel="stylesheet" href="assets/css/layout.css">
+    <link rel="stylesheet" href="assets/css/dashboard.css">
+</head>
+
+<body>
+
+    <div class="app-container">
+
+        <aside class="sidebar">
+            <div class="sidebar-logo">
+                <div class="logo-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="9" cy="7" r="4"></circle>
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                    </svg>
+                </div>
+                <span class="logo-text" style="color:var(--primary); font-size: 20px;">SigaS</span>
+            </div>
+
+            <div class="nav-section-title">PRINCIPAL</div>
+            <a href="dashboard.html" class="nav-item">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="3" y="3" width="7" height="7"></rect>
+                    <rect x="14" y="3" width="7" height="7"></rect>
+                    <rect x="14" y="14" width="7" height="7"></rect>
+                    <rect x="3" y="14" width="7" height="7"></rect>
+                </svg>
+                Dashboard
+            </a>
+
+            <div class="nav-section-title">GESTÃO</div>
+            <a href="cadastros.html" class="nav-item">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="8.5" cy="7" r="4"></circle>
+                    <line x1="20" y1="8" x2="20" y2="14"></line>
+                    <line x1="23" y1="11" x2="17" y2="11"></line>
+                </svg>
+                Cadastros
+            </a>
+            <a href="atendimento-individual.html" class="nav-item">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                    <polyline points="14 2 14 8 20 8"></polyline>
+                    <line x1="16" y1="13" x2="8" y2="13"></line>
+                    <line x1="16" y1="17" x2="8" y2="17"></line>
+                    <polyline points="10 9 9 9 8 9"></polyline>
+                </svg>
+                Atendimentos
+            </a>
+            <a href="atendimento-grupo.html" class="nav-item" style="padding-left: 44px; font-size: 13px;">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    style="margin-right:8px; opacity:0.8; width:16px;">
+                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="9" cy="7" r="4"></circle>
+                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                </svg>
+                Atend. em Grupo
+            </a>
+            <a href="encaminhamentos.html" class="nav-item">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M2.5 2v6h6M21.5 22v-6h-6" />
+                    <path d="M22 11.5A10 10 0 0 0 3.2 7.2M2 12.5a10 10 0 0 0 18.8 4.2" />
+                </svg>
+                Encaminhamentos
+            </a>
+
+            <div class="nav-section-title">ANÁLISE</div>
+            <a href="relatorios.html" class="nav-item active">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="20" x2="18" y2="10"></line>
+                    <line x1="12" y1="20" x2="12" y2="4"></line>
+                    <line x1="6" y1="20" x2="6" y2="14"></line>
+                </svg>
+                Relatórios
+            </a>
+
+            <a href="#" class="nav-item mt-auto"
+                onclick="alert('Essa funcionalidade está na esteira de desenvolvimento futuro.')">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="3"></circle>
+                    <path
+                        d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z">
+                    </path>
+                </svg>
+                Configurações
+            </a>
+        </aside>
+
+        <div class="main-wrapper">
+
+            <header class="topbar">
+                <div class="search-bar">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--text-placeholder)"
+                        stroke-width="2">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                    <input type="text" placeholder="Buscar por CPF, NIS ou Nome...">
+                </div>
+
+                <div class="topbar-actions">
+                    <button class="icon-btn" id="btnNotification">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+                            <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+                        </svg>
+                        <span class="notification-dot"></span>
+                    </button>
+                    <button class="icon-btn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+                            <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                        </svg>
+                    </button>
+
+                    <div class="user-profile">
+                        <div class="user-info">
+                            <span class="user-name" id="topbarUserName">Carregando...</span>
+                            <span class="user-role" id="topbarUserRole">Assistente Social</span>
+                        </div>
+                        <div class="user-avatar" id="topbarUserAvatar"
+                            style="background-color: #0D8ABC; color: white; display: flex; align-items: center; justify-content: center; font-weight: bold;">
+                            US
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <main class="content-area">
+                <style>
+                    .report-header {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        margin-bottom: 24px;
+                    }
+
+                    .report-title h2 {
+                        font-size: 24px;
+                        color: var(--text-main);
+                        margin-bottom: 4px;
+                    }
+
+                    .report-title p {
+                        color: var(--text-muted);
+                        font-size: 14px;
+                    }
+
+                    .filter-bar {
+                        display: flex;
+                        gap: 12px;
+                        background: white;
+                        padding: 16px;
+                        border-radius: 12px;
+                        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+                        margin-bottom: 24px;
+                        align-items: flex-end;
+                    }
+
+                    .filter-group {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 6px;
+                    }
+
+                    .filter-group label {
+                        font-size: 12px;
+                        font-weight: 600;
+                        color: var(--text-muted);
+                        text-transform: uppercase;
+                    }
+
+                    .filter-group input,
+                    .filter-group select {
+                        padding: 10px 14px;
+                        border: 1px solid var(--border-color);
+                        border-radius: 8px;
+                        font-size: 14px;
+                        color: var(--text-main);
+                        min-width: 150px;
+                        outline: none;
+                    }
+
+                    .filter-group input:focus,
+                    .filter-group select:focus {
+                        border-color: var(--primary);
+                        box-shadow: 0 0 0 3px rgba(13, 138, 188, 0.1);
+                    }
+
+                    .btn-filter {
+                        background: var(--primary);
+                        color: white;
+                        padding: 10px 24px;
+                        border: none;
+                        border-radius: 8px;
+                        font-weight: 600;
+                        cursor: pointer;
+                        height: 41px;
+                        transition: 0.2s;
+                    }
+
+                    .btn-filter:hover {
+                        opacity: 0.9;
+                        transform: translateY(-1px);
+                    }
+
+                    .btn-export {
+                        background: white;
+                        color: var(--text-main);
+                        border: 1px solid var(--border-color);
+                        padding: 10px 16px;
+                        border-radius: 8px;
+                        font-weight: 600;
+                        cursor: pointer;
+                        display: flex;
+                        align-items: center;
+                        gap: 8px;
+                        height: 41px;
+                        transition: 0.2s;
+                    }
+
+                    .btn-export:hover {
+                        background: #f9fafb;
+                        border-color: #d1d5db;
+                    }
+
+                    .report-metrics {
+                        display: grid;
+                        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+                        gap: 20px;
+                        margin-bottom: 24px;
+                    }
+
+                    .metric-card {
+                        background: white;
+                        padding: 20px;
+                        border-radius: 12px;
+                        border: 1px solid var(--border-color);
+                        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.02);
+                    }
+
+                    .metric-title {
+                        font-size: 13px;
+                        color: var(--text-muted);
+                        font-weight: 500;
+                        margin-bottom: 8px;
+                    }
+
+                    .metric-value {
+                        font-size: 32px;
+                        font-weight: 700;
+                        color: var(--text-main);
+                    }
+
+                    .metric-trend {
+                        margin-top: 8px;
+                        font-size: 12px;
+                        display: flex;
+                        align-items: center;
+                        gap: 4px;
+                    }
+
+                    .trend-up {
+                        color: #22c55e;
+                    }
+
+                    .trend-down {
+                        color: #ef4444;
+                    }
+
+                    .report-split {
+                        display: grid;
+                        grid-template-columns: 1fr 1fr;
+                        gap: 24px;
+                        margin-bottom: 24px;
+                    }
+
+                    .report-panel {
+                        background: white;
+                        border-radius: 12px;
+                        border: 1px solid var(--border-color);
+                        padding: 20px;
+                    }
+
+                    .panel-title {
+                        font-size: 16px;
+                        font-weight: 600;
+                        color: var(--text-main);
+                        margin-bottom: 16px;
+                        padding-bottom: 12px;
+                        border-bottom: 1px solid var(--border-color);
+                    }
+
+                    .bar-chart {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: flex-end;
+                        height: 160px;
+                        padding-top: 20px;
+                    }
+
+                    .bar-column {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        gap: 8px;
+                        flex: 1;
+                    }
+
+                    .bar-fill {
+                        width: 40%;
+                        background: var(--primary);
+                        border-radius: 4px 4px 0 0;
+                        min-height: 4px;
+                        transition: height 0.5s ease;
+                        position: relative;
+                    }
+
+                    .bar-label {
+                        font-size: 11px;
+                        color: var(--text-muted);
+                        font-weight: 500;
+                    }
+
+                    .bar-value {
+                        position: absolute;
+                        top: -20px;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        font-size: 11px;
+                        font-weight: 600;
+                        color: var(--text-main);
+                    }
+
+                    /* Custom widths for modal */
+                    .w-full {
+                        width: 100%;
+                        border-collapse: collapse;
+                    }
+
+                    .w-full th {
+                        text-align: left;
+                        padding: 12px 16px;
+                        background: #f9fafb;
+                        color: var(--text-muted);
+                        font-size: 12px;
+                        font-weight: 600;
+                        text-transform: uppercase;
+                        border-bottom: 1px solid var(--border-color);
+                    }
+
+                    .w-full td {
+                        padding: 16px;
+                        font-size: 14px;
+                        border-bottom: 1px solid var(--border-color);
+                        color: var(--text-main);
+                    }
+                </style>
+
+                <div class="report-header">
+                    <div class="report-title">
+                        <h2>Relatórios Gerenciais</h2>
+                        <p>Acompanhe os indicadores consolidados de atendimentos realizados</p>
+                    </div>
+                </div>
+
+                <div class="filter-bar">
+                    <div class="filter-group">
+                        <label>Mês de Referência</label>
+                        <input type="month" id="filtroMes" value="">
+                    </div>
+                    <div class="filter-group">
+                        <label>Técnico Responsável</label>
+                        <select id="filtroTecnico">
+                            <option value="todos">Todos os Técnicos</option>
+                            <option value="1">Administrador (admin@sigas.com)</option>
+                        </select>
+                    </div>
+                    <button class="btn-filter" id="btnGerarRelatorio">Gerar Relatório</button>
+                    <button class="btn-export" id="btnImprimir" style="margin-left:auto;">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <polyline points="6 9 6 2 18 2 18 9"></polyline>
+                            <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+                            <rect x="6" y="14" width="12" height="8"></rect>
+                        </svg>
+                        Imprimir / PDF
+                    </button>
+                </div>
+
+                <div class="report-metrics">
+                    <div class="metric-card">
+                        <div class="metric-title">TOTAL DE ATENDIMENTOS</div>
+                        <div class="metric-value" id="resTotalAtendimentos">0</div>
+                        <div class="metric-trend trend-up">No período selecionado</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-title">NOVOS CADASTROS</div>
+                        <div class="metric-value" id="resTotalCadastros">0</div>
+                        <div class="metric-trend trend-up">Famílias/Indivíduos</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-title">ACOMPANHAMENTOS ATIVOS</div>
+                        <div class="metric-value" id="resTotalAcompanhamentos">0</div>
+                        <div class="metric-trend">Neste momento</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-title">ENCONTROS DE GRUPO</div>
+                        <div class="metric-value" id="resTotalEncontros">0</div>
+                        <div class="metric-trend">Realizados no mês</div>
+                    </div>
+                </div>
+
+                <div class="report-split">
+                    <div class="report-panel">
+                        <div class="panel-title">Atendimentos por Mês (Últimos 6 Meses)</div>
+                        <div class="bar-chart" id="chartAtendimentos">
+                            <!-- Barras geradas por JS -->
+                        </div>
+                    </div>
+
+                    <div class="report-panel">
+                        <div class="panel-title">Cadastros por Status</div>
+                        <div style="display:flex; flex-direction:column; gap:16px;">
+                            <div>
+                                <div style="display:flex; justify-content:space-between; margin-bottom:6px;">
+                                    <span
+                                        style="font-size:13px; color:var(--text-main); font-weight:500;">Acompanhamento
+                                        Ativo</span>
+                                    <span style="font-size:13px; font-weight:600;" id="progAtivoNum">0</span>
+                                </div>
+                                <div
+                                    style="height:8px; width:100%; background:#f3f4f6; border-radius:4px; overflow:hidden;">
+                                    <div style="height:100%; background:#22c55e; width:0%;" id="progAtivoBar"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div style="display:flex; justify-content:space-between; margin-bottom:6px;">
+                                    <span style="font-size:13px; color:var(--text-main); font-weight:500;">Somente
+                                        Cadastrado</span>
+                                    <span style="font-size:13px; font-weight:600;" id="progCadNum">0</span>
+                                </div>
+                                <div
+                                    style="height:8px; width:100%; background:#f3f4f6; border-radius:4px; overflow:hidden;">
+                                    <div style="height:100%; background:#3b82f6; width:0%;" id="progCadBar"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div style="display:flex; justify-content:space-between; margin-bottom:6px;">
+                                    <span style="font-size:13px; color:var(--text-main); font-weight:500;">Inativo /
+                                        Transferido</span>
+                                    <span style="font-size:13px; font-weight:600;" id="progInatNum">0</span>
+                                </div>
+                                <div
+                                    style="height:8px; width:100%; background:#f3f4f6; border-radius:4px; overflow:hidden;">
+                                    <div style="height:100%; background:#9ca3af; width:0%;" id="progInatBar"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="report-panel">
+                    <div class="panel-title">Detalhamento dos Atendimentos Realizados (Período Selecionado)</div>
+                    <div style="overflow-x:auto;">
+                        <table class="w-full">
+                            <thead>
+                                <tr>
+                                    <th>Data</th>
+                                    <th>Modalidade</th>
+                                    <th>Beneficiário / Alvo</th>
+                                    <th>Técnico</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tabelaRelatorioBody">
+                                <tr>
+                                    <td colspan="4" style="text-align:center; color:var(--text-muted); padding:32px;">
+                                        Clique em "Gerar Relatório" para exibir os dados do mês selecionado.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </main>
+        </div>
+    </div>
+
+    <script src="assets/js/layout.js"></script>
+    <script src="assets/js/auth.js"></script>
+    <script src="assets/js/relatorios.js"></script>
+</body>
+
+</html>
+

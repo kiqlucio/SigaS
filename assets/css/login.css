@@ -92,6 +92,28 @@ body {
   margin: 24px 0;
 }
 
+/* Mensagem de Erro */
+.login-error-box {
+  display: none;
+  align-items: center;
+  gap: 12px;
+  background-color: #FEE2E2;
+  color: #DC2626;
+  padding: 12px 16px;
+  border-radius: 8px;
+  border: 1px solid #F87171;
+  margin-bottom: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: left;
+  animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
 /* Formulário */
 .input-group {
   text-align: left;

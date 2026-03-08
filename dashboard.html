@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="assets/css/login.css">
     <link rel="stylesheet" href="assets/css/layout.css">
     <link rel="stylesheet" href="assets/css/dashboard.css">
+    <link rel="stylesheet" href="assets/css/telas.css">
 </head>
 
 <body>
@@ -15,20 +16,62 @@
     <div class="app-container">
 
         <aside class="sidebar">
-           <a href="dashboard.html" class="nav-item active">
-    Dashboard
-</a>
+            <div class="sidebar-logo">
+                <div class="logo-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="9" cy="7" r="4"></circle>
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                    </svg>
+                </div>
+                <span class="logo-text" style="color:var(--primary); font-size: 20px;">SigaS</span>
+            </div>
 
-<a href="atendimento-individual.html" class="nav-item">
-    Atendimentos Individuais
-</a>
+            <div class="nav-section-title">PRINCIPAL</div>
+            <a href="dashboard.html" class="nav-item active">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="3" y="3" width="7" height="7"></rect>
+                    <rect x="14" y="3" width="7" height="7"></rect>
+                    <rect x="14" y="14" width="7" height="7"></rect>
+                    <rect x="3" y="14" width="7" height="7"></rect>
+                </svg>
+                Dashboard
+            </a>
 
-<a href="atendimento-grupo.html" class="nav-item">
-    Atendimento em Grupo
-</a>
+            <div class="nav-section-title">GESTÃO</div>
+            <a href="cadastros.html" class="nav-item">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="8.5" cy="7" r="4"></circle>
+                    <line x1="20" y1="8" x2="20" y2="14"></line>
+                    <line x1="23" y1="11" x2="17" y2="11"></line>
+                </svg>
+                Cadastros
+            </a>
+            <a href="atendimento-individual.html" class="nav-item">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                    <polyline points="14 2 14 8 20 8"></polyline>
+                    <line x1="16" y1="13" x2="8" y2="13"></line>
+                    <line x1="16" y1="17" x2="8" y2="17"></line>
+                    <polyline points="10 9 9 9 8 9"></polyline>
+                </svg>
+                Atendimentos
+            </a>
+            <a href="atendimento-grupo.html" class="nav-item " style="padding-left: 44px; font-size: 13px;">
+                Atend. em Grupo
+            </a>
+            <a href="encaminhamentos.html" class="nav-item">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M2.5 2v6h6M21.5 22v-6h-6" />
+                    <path d="M22 11.5A10 10 0 0 0 3.2 7.2M2 12.5a10 10 0 0 0 18.8 4.2" />
+                </svg>
+                Encaminhamentos
+            </a>
 
-            <div class="nav-section-title">Análise</div>
-            <a href="#" class="nav-item">
+            <div class="nav-section-title">ANÁLISE</div>
+            <a href="relatorios.html" class="nav-item">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <line x1="18" y1="20" x2="18" y2="10"></line>
                     <line x1="12" y1="20" x2="12" y2="4"></line>
@@ -37,7 +80,7 @@
                 Relatórios
             </a>
 
-            <a href="#" class="nav-item mt-auto">
+            <a href="configuracoes.html" class="nav-item mt-auto">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <circle cx="12" cy="12" r="3"></circle>
                     <path
@@ -61,7 +104,7 @@
                 </div>
 
                 <div class="topbar-actions">
-                    <button class="icon-btn">
+                    <button class="icon-btn" id="btnNotification" aria-label="Notificações">
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                             stroke-width="2">
                             <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
@@ -69,7 +112,7 @@
                         </svg>
                         <span class="notification-dot"></span>
                     </button>
-                    <button class="icon-btn">
+                    <button class="icon-btn" aria-label="Ajuda e Suporte">
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                             stroke-width="2">
                             <circle cx="12" cy="12" r="10"></circle>
@@ -80,11 +123,12 @@
 
                     <div class="user-profile">
                         <div class="user-info">
-                            <span class="user-name">Ana Silva</span>
-                            <span class="user-role">Assistente Social</span>
+                            <span class="user-name" id="topbarUserName">Carregando...</span>
+                            <span class="user-role" id="topbarUserRole">Assistente Social</span>
                         </div>
-                        <div class="user-avatar"
-                            style="background-image: url('https://ui-avatars.com/api/?name=Ana+Silva&background=0D8ABC&color=fff'); background-size: cover;">
+                        <div class="user-avatar" id="topbarUserAvatar"
+                            style="background-color: #0D8ABC; color: white; display: flex; align-items: center; justify-content: center; font-weight: bold;">
+                            US
                         </div>
                     </div>
                 </div>
@@ -92,7 +136,7 @@
 
             <main class="content-area">
 
-                <div class="alert-banner">
+                <div class="alert-banner" id="dashboardAlerts" style="display: none;">
                     <div class="alert-content">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                             stroke-width="2">
@@ -104,41 +148,42 @@
                         </svg>
                         <div>
                             <span class="alert-title">Alertas Pendentes</span>
-                            <span class="alert-desc">Existem 12 avaliações multidimensionais com prazo expirado.</span>
+                            <span class="alert-desc" id="alertDesc">Existem avaliações multidimensionais com prazo
+                                expirado.</span>
                         </div>
                     </div>
-                    <button class="btn-danger">Ver Agora</button>
+                    <button class="btn-danger" aria-label="Ver alertas pendentes agora">Ver Agora</button>
                 </div>
 
                 <div class="kpi-grid">
                     <div class="kpi-card">
                         <span class="kpi-label">Famílias</span>
-                        <div class="kpi-value">1.240</div>
+                        <div class="kpi-value" id="kpiFamilias">--</div>
                         <div class="kpi-trend trend-up">↗ +2.5%</div>
                     </div>
                     <div class="kpi-card">
                         <span class="kpi-label">Indivíduos</span>
-                        <div class="kpi-value">4.850</div>
+                        <div class="kpi-value" id="kpiIndividuos">--</div>
                         <div class="kpi-trend trend-down">↘ -1.2%</div>
                     </div>
                     <div class="kpi-card">
                         <span class="kpi-label">Atend. Ind.</span>
-                        <div class="kpi-value">320</div>
+                        <div class="kpi-value" id="kpiAtendInd">--</div>
                         <div class="kpi-trend trend-up">↗ +5.4%</div>
                     </div>
                     <div class="kpi-card">
                         <span class="kpi-label">Atend. Grupo</span>
-                        <div class="kpi-value">45</div>
+                        <div class="kpi-value" id="kpiAtendGrupo">--</div>
                         <div class="kpi-trend trend-neutral">- 0%</div>
                     </div>
                     <div class="kpi-card">
                         <span class="kpi-label">Acompanhamentos</span>
-                        <div class="kpi-value">128</div>
+                        <div class="kpi-value" id="kpiAcompanhamentos">--</div>
                         <div class="kpi-trend trend-up">↗ +8%</div>
                     </div>
                     <div class="kpi-card alert-card">
                         <span class="kpi-label" style="color:#EF4444">Alertas</span>
-                        <div class="kpi-value">12</div>
+                        <div class="kpi-value" id="kpiAlertas">--</div>
                         <div class="kpi-trend trend-down">! Atrasados</div>
                     </div>
                 </div>
@@ -150,7 +195,7 @@
                                 <h2 class="panel-title">Ações Rápidas</h2>
                             </div>
                             <div class="quick-actions-grid">
-                                <div class="action-card">
+                                <div class="action-card" onclick="window.location.href='cadastros.html'">
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                         stroke-width="2">
                                         <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
@@ -160,7 +205,7 @@
                                     </svg>
                                     <span>Novo Cadastro</span>
                                 </div>
-                                <div class="action-card">
+                                <div class="action-card" onclick="window.location.href='atendimento-individual.html'">
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                         stroke-width="2">
                                         <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
@@ -171,7 +216,7 @@
                                     </svg>
                                     <span>Atend. Individual</span>
                                 </div>
-                                <div class="action-card">
+                                <div class="action-card" onclick="window.location.href='atendimento-grupo.html'">
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                         stroke-width="2">
                                         <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
@@ -183,15 +228,59 @@
                                 </div>
                             </div>
                         </div>
+
+                        <div class="panel">
+                            <div class="panel-header" style="margin-bottom: 0;">
+                                <h2 class="panel-title">Atividades Recentes</h2>
+                                <a href="#"
+                                    style="font-size: 13px; color: var(--primary); text-decoration: none; font-weight: 500;">Ver
+                                    tudo</a>
+                            </div>
+                            <div style="padding-top: 20px;">
+                                <div
+                                    style="text-align:center; padding: 24px; color: var(--text-muted); font-size:13px;">
+                                    Não há atividades ou logs registrados recentemente.
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
                     <div class="right-col">
-                        <div class="panel">
-                            <div class="panel-header">
-                                <h2 class="panel-title">Agenda</h2>
+                        <!-- Widget Calendário -->
+                        <div class="panel" style="padding: 24px;">
+                            <div class="panel-header"
+                                style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+                                <h2 class="panel-title" style="margin: 0;">Calendário de Tarefas</h2>
                             </div>
-                            <p style="color: var(--text-muted); font-size: 14px; text-align: center; padding: 20px 0;">
-                                Calendário e próximos compromissos virão aqui...</p>
+                            <!-- O JS renderizará a tabela do calendário aqui -->
+                            <div id="miniCalendarContainer" style="font-family: 'Inter', sans-serif;"></div>
+                        </div>
+
+                        <!-- Widget Lembretes -->
+                        <div class="panel" style="padding: 24px;">
+                            <div class="panel-header"
+                                style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+                                <h2 class="panel-title" style="margin: 0;">Próximos Compromissos</h2>
+                                <button id="btnAbrirModalLembrete"
+                                    style="background: none; border: none; color: var(--primary); font-size: 13px; font-weight: 600; cursor: pointer;">
+                                    + Lembrete
+                                </button>
+                            </div>
+                            <!-- Container onde o JS vai renderizar os Lembretes dinamicamente -->
+                            <div id="listaLembretesContainer">
+                                <p style="text-align:center; font-size:13px; color:var(--text-muted); padding:10px;">
+                                    Carregando compromissos...</p>
+                            </div>
+                        </div>
+
+                        <div class="panel" style="background-color: var(--primary); color: white; padding: 24px;">
+                            <h2 style="font-size: 16px; margin-bottom: 8px;">SigaS Cloud</h2>
+                            <p style="font-size: 13px; opacity: 0.9; margin-bottom: 16px;">Seu sistema está sincronizado
+                                e operando normalmente na nuvem.</p>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path>
+                            </svg>
                         </div>
                     </div>
                 </div>
@@ -200,6 +289,46 @@
         </div>
     </div>
 
+
+
+    <!-- Modal Novo Lembrete -->
+    <div class="modal-overlay" id="modalNovoLembrete">
+        <div class="modal-content" style="max-width: 400px;">
+            <div class="modal-header">
+                <h2>Adicionar Compromisso</h2>
+                <button class="btn-close" id="btnFecharModalLembrete" aria-label="Fechar">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="formNovoLembrete">
+                    <div class="form-group" style="margin-bottom: 16px;">
+                        <label>Título / Descrição *</label>
+                        <input type="text" id="lembreteTextoInput" required
+                            placeholder="Ex: Visita Domiciliar - Família Silva"
+                            style="width: 100%; height: 42px; border: 1px solid var(--border-color); border-radius: 8px; padding: 0 12px; outline: none; box-sizing: border-box;">
+                    </div>
+                    <div class="form-group" style="margin-bottom: 16px;">
+                        <label>Data Limite (Opcional)</label>
+                        <input type="date" id="lembreteDataInput"
+                            style="width: 100%; height: 42px; border: 1px solid var(--border-color); border-radius: 8px; padding: 0 12px; outline: none; box-sizing: border-box;">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn-outline" id="btnCancelarModalLembrete"
+                    style="background: transparent; border: 1px solid var(--border-color); padding: 10px 16px; border-radius: 6px; cursor: pointer;">Cancelar</button>
+                <button type="submit" form="formNovoLembrete" class="btn-apply"
+                    style="background-color: var(--primary); color: white; border: none; padding: 10px 16px; border-radius: 6px; cursor: pointer; font-weight: 600;">Salvar
+                    Lembrete</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/layout.js"></script>
+    <script src="assets/js/auth.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/dashboard_stats.js"></script>
+    <script src="assets/js/beneficiarios_list.js"></script>
+    <script src="assets/js/grupos_list.js"></script>
 </body>
 
 </html>

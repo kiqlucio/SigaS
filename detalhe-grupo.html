@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SigaS - Detalhes do Grupo</title>
+    <link rel="stylesheet" href="./assets/css/login.css">
+    <link rel="stylesheet" href="./assets/css/layout.css">
+    <link rel="stylesheet" href="./assets/css/telas.css">
+    <link rel="stylesheet" href="./assets/css/prontuario.css">
+    <style>
+        .custom-select-bnf {
+            width: 100%;
+            height: 42px;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 0 12px;
+            outline: none;
+            font-family: inherit;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="app-container">
+        <aside class="sidebar">
+            <div class="sidebar-logo">
+                <div class="logo-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="9" cy="7" r="4"></circle>
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                    </svg>
+                </div>
+                <span class="logo-text" style="color:var(--primary); font-size: 20px;">SigaS</span>
+            </div>
+
+            <div class="nav-section-title">PRINCIPAL</div>
+            <a href="dashboard.html" class="nav-item">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="3" y="3" width="7" height="7"></rect>
+                    <rect x="14" y="3" width="7" height="7"></rect>
+                    <rect x="14" y="14" width="7" height="7"></rect>
+                    <rect x="3" y="14" width="7" height="7"></rect>
+                </svg>
+                Dashboard
+            </a>
+
+            <div class="nav-section-title">GESTÃO</div>
+            <a href="cadastros.html" class="nav-item">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="8.5" cy="7" r="4"></circle>
+                    <line x1="20" y1="8" x2="20" y2="14"></line>
+                    <line x1="23" y1="11" x2="17" y2="11"></line>
+                </svg>
+                Cadastros
+            </a>
+            <a href="atendimento-individual.html" class="nav-item">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                    <polyline points="14 2 14 8 20 8"></polyline>
+                    <line x1="16" y1="13" x2="8" y2="13"></line>
+                    <line x1="16" y1="17" x2="8" y2="17"></line>
+                    <polyline points="10 9 9 9 8 9"></polyline>
+                </svg>
+                Atendimentos
+            </a>
+            <a href="atendimento-grupo.html" class="nav-item active" style="padding-left: 44px; font-size: 13px;">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    style="margin-right:8px; opacity:0.8; width:16px;">
+                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="9" cy="7" r="4"></circle>
+                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                </svg>
+                Atend. em Grupo
+            </a>
+            <a href="encaminhamentos.html" class="nav-item">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M2.5 2v6h6M21.5 22v-6h-6" />
+                    <path d="M22 11.5A10 10 0 0 0 3.2 7.2M2 12.5a10 10 0 0 0 18.8 4.2" />
+                </svg>
+                Encaminhamentos
+            </a>
+
+            <div class="nav-section-title">ANÁLISE</div>
+            <a href="relatorios.html" class="nav-item">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="20" x2="18" y2="10"></line>
+                    <line x1="12" y1="20" x2="12" y2="4"></line>
+                    <line x1="6" y1="20" x2="6" y2="14"></line>
+                </svg>
+                Relatórios
+            </a>
+
+            <a href="#" class="nav-item mt-auto" onclick="alert('Configurações Administrativas do sistema em breve.')">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="3"></circle>
+                    <path
+                        d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z">
+                    </path>
+                </svg>
+                Configurações
+            </a>
+        </aside>
+
+        <div class="main-wrapper">
+            <header class="topbar">
+                <div style="font-size: 20px; font-weight: 700;">Gerenciamento de Grupo</div>
+                <div style="display: flex; align-items: center; gap: 16px;">
+                    <div class="user-profile">
+                        <div class="user-avatar" id="topbarUserAvatar"
+                            style="background-color: #0D8ABC; color: white; display: flex; align-items: center; justify-content: center; font-weight: bold;">
+                            US</div>
+                    </div>
+                </div>
+            </header>
+
+            <main class="content-area">
+
+                <div class="page-header" style="margin-bottom: 16px;">
+                    <div class="page-title">
+                        <p style="margin-bottom: 8px;"><a href="atendimento-grupo.html"
+                                style="color: var(--primary); text-decoration: none; font-weight: 500;">&larr; Voltar
+                                para Grupos</a></p>
+                    </div>
+                    <button id="btnAbrirModalEncerrarGrupo" class="btn-outline"
+                        style="color: var(--danger); border-color: var(--danger);">Encerrar Grupo</button>
+                </div>
+
+                <div class="profile-header"
+                    style="background: white; border: 1px solid var(--border-color); border-radius: 12px; padding: 24px; display: flex; align-items: center; gap: 24px;">
+                    <div class="profile-avatar"
+                        style="width: 80px; height: 80px; font-size: 32px; background: #818CF8; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                        </svg>
+                    </div>
+                    <div class="profile-info">
+                        <h2 id="grupoNome" style="font-size: 24px; font-weight: 700; margin-bottom: 8px;">Carregando...
+                        </h2>
+                        <div class="profile-badges" style="display: flex; gap: 12px; font-size: 13px;">
+                            <span class="badge-info"
+                                style="background: #F3F4F6; padding: 4px 10px; border-radius: 6px; color: var(--text-muted);">ID:
+                                <span id="grupoId"></span></span>
+                            <span class="tag" id="grupoTipo"
+                                style="padding: 4px 10px; border-radius: 6px; font-weight: 600;">--</span>
+                            <span class="badge-info"
+                                style="background: #F3F4F6; padding: 4px 10px; border-radius: 6px; color: var(--text-muted);">Técnico:
+                                <span id="grupoTecnico"></span></span>
+                            <span class="status-pill" id="grupoStatus"
+                                style="padding: 4px 10px; border-radius: 12px; font-size: 11px; font-weight: 600;">--</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tabs-nav"
+                    style="margin-top: 24px; display: flex; gap: 16px; border-bottom: 2px solid var(--border-color);">
+                    <button class="tab-btn active" data-target="tab-participantes"
+                        style="background: transparent; border: none; padding: 12px 0; font-weight: 600; color: var(--primary); border-bottom: 2px solid var(--primary); cursor: pointer; font-size: 14px;">Participantes</button>
+                    <button class="tab-btn" data-target="tab-registrar-encontro"
+                        style="background: transparent; border: none; padding: 12px 0; font-weight: 600; color: var(--text-muted); cursor: pointer; font-size: 14px;">Registrar
+                        Encontro</button>
+                    <button class="tab-btn" data-target="tab-historico-grupo"
+                        style="background: transparent; border: none; padding: 12px 0; font-weight: 600; color: var(--text-muted); cursor: pointer; font-size: 14px;">Histórico
+                        de Encontros</button>
+                </div>
+
+                <div
+                    style="background: white; border: 1px solid var(--border-color); border-top: none; border-bottom-left-radius: 12px; border-bottom-right-radius: 12px; padding: 32px;">
+
+                    <div id="tab-participantes" class="tab-pane active">
+                        <div
+                            style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px;">
+                            <h3 style="color: var(--text-main);">Lista de Participantes (<span
+                                    id="contagemParticipantes">0/0</span>)</h3>
+                            <button id="btnAbrirModalAddMembro"
+                                style="background: var(--primary); color: white; border: none; border-radius: 6px; padding: 10px 16px; font-weight: 600; cursor: pointer;">+
+                                Adicionar Participante</button>
+                        </div>
+                        <div style="border: 1px solid var(--border-color); border-radius: 8px; overflow: hidden;">
+                            <table class="data-table" style="width: 100%; border-collapse: collapse;">
+                                <thead>
+                                    <tr
+                                        style="border-bottom: 1px solid var(--border-color); color: var(--text-muted); font-size: 11px; text-transform: uppercase;">
+                                        <th style="padding: 16px; text-align: left;">NOME DO BENEFICIÁRIO</th>
+                                        <th style="padding: 16px; text-align: left;">NIS</th>
+                                        <th style="padding: 16px; text-align: left;">DATA DE INGRESSO</th>
+                                        <th style="padding: 16px; text-align: center;">AÇÕES</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="tabelaMembros">
+                                    <!-- Preenchido via JS -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div id="tab-registrar-encontro" class="tab-pane" style="display: none;">
+                        <h3 style="margin-bottom: 24px; color: var(--text-main);">Registrar Novo Encontro</h3>
+                        <form id="formNovoEncontro">
+                            <div style="display: grid; grid-template-columns: 1fr 2fr; gap: 16px; margin-bottom: 16px;">
+                                <div style="display: flex; flex-direction: column; gap: 8px;">
+                                    <label style="font-size: 12px; font-weight: 600; color: var(--text-label);">Data do
+                                        Encontro *</label>
+                                    <input type="date" id="dataEncontroInput" required
+                                        style="height: 42px; border: 1px solid var(--border-color); border-radius: 8px; padding: 0 12px; outline: none;">
+                                </div>
+                                <div style="display: flex; flex-direction: column; gap: 8px;">
+                                    <label style="font-size: 12px; font-weight: 600; color: var(--text-label);">Tema /
+                                        Pauta da Reunião *</label>
+                                    <input type="text" id="temaEncontroInput" required
+                                        placeholder="Ex: Roda de conversa sobre saúde mental"
+                                        style="height: 42px; border: 1px solid var(--border-color); border-radius: 8px; padding: 0 12px; outline: none;">
+                                </div>
+                            </div>
+                            <div style="display: flex; flex-direction: column; gap: 8px; margin-bottom: 24px;">
+                                <label style="font-size: 12px; font-weight: 600; color: var(--text-label);">Resumo das
+                                    Atividades</label>
+                                <textarea id="resumoEncontroInput" rows="4"
+                                    placeholder="Descreva como foi a dinâmica e a participação do grupo..."
+                                    style="border: 1px solid var(--border-color); border-radius: 8px; padding: 12px; font-size: 14px; outline: none; font-family: inherit; resize: vertical;"></textarea>
+                            </div>
+                            <button type="submit" class="btn-apply"
+                                style="background: var(--primary); color: white; border: none; padding: 12px 24px; border-radius: 6px; font-weight: 600; cursor: pointer;">Salvar
+                                Encontro</button>
+                        </form>
+                    </div>
+
+                    <div id="tab-historico-grupo" class="tab-pane" style="display: none;">
+                        <h3 style="margin-bottom: 24px; color: var(--text-main);">Histórico de Encontros</h3>
+                        <div class="timeline" id="timelineEncontros"
+                            style="display: flex; flex-direction: column; gap: 24px;">
+                            <!-- Preenchido via JS -->
+                        </div>
+                    </div>
+
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- Modal Adicionar Membro -->
+    <div class="modal-overlay" id="modalAddMembro">
+        <div class="modal-content" style="max-width: 500px;">
+            <div class="modal-header">
+                <h2>Adicionar Participante</h2>
+                <button class="btn-close" id="btnFecharModalAddMembro">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="formAddMembro">
+                    <p style="font-size: 14px; color: var(--text-muted); margin-bottom: 16px;">Selecione um beneficiário
+                        ativo para adicionar a este grupo.</p>
+                    <div class="form-group" style="margin-bottom: 16px;">
+                        <label>Beneficiário *</label>
+                        <select id="selectBeneficiario" required class="custom-select-bnf">
+                            <option value="">Carregando beneficiários...</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn-outline" id="btnCancelarModalAddMembro"
+                    style="background: transparent; border: 1px solid var(--border-color); padding: 10px 16px; border-radius: 6px; cursor: pointer;">Cancelar</button>
+                <button type="submit" class="btn-apply" form="formAddMembro"
+                    style="background-color: var(--primary); color: white; border: none; padding: 10px 16px; border-radius: 6px; cursor: pointer; font-weight: 600;">Adicionar
+                    ao Grupo</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Encerrar Grupo -->
+    <div class="modal-overlay" id="modalEncerrarGrupo">
+        <div class="modal-content" style="max-width: 500px;">
+            <div class="modal-header">
+                <h2>Encerrar Grupo</h2>
+                <button class="btn-close" id="btnFecharModalEncerrarGrupo">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p style="font-size: 14px; color: var(--text-muted); margin-bottom: 16px;">
+                    Você está prestes a inativar este grupo. Essa ação mudará o status para 'Inativo'.
+                </p>
+                <div class="form-group" style="margin-bottom: 16px;">
+                    <label>Motivo do Encerramento *</label>
+                    <select required class="custom-select-bnf">
+                        <option value="">Selecione o motivo...</option>
+                        <option>Ciclo Concluído</option>
+                        <option>Baixa Adesão</option>
+                        <option>Remanejamento de Técnico</option>
+                    </select>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn-outline" id="btnCancelarModalEncerrarGrupo"
+                    style="background: transparent; border: 1px solid var(--border-color); padding: 10px 16px; border-radius: 6px; cursor: pointer;">Cancelar</button>
+                <button type="button" class="btn-apply" id="btnConfirmarEncerramento"
+                    style="background-color: #FEE2E2; color: #EF4444; border: 1px solid #EF4444; padding: 10px 16px; border-radius: 6px; cursor: pointer; font-weight: 600;">Confirmar
+                    Encerramento</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="./assets/js/layout.js"></script>
+    <script src="./assets/js/auth.js"></script>
+    <script src="./assets/js/detalhe-grupo.js"></script>
+</body>
+
+</html>
+

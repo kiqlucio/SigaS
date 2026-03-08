@@ -4,10 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SigaS - Atendimento Individual</title>
-    <link rel="stylesheet" href="./assets/css/login.css">
-    <link rel="stylesheet" href="./assets/css/layout.css">
-    <link rel="stylesheet" href="./assets/css/telas.css">
+    <title>SigaS - Gerenciar Cadastros</title>
+    <link rel="stylesheet" href="assets/css/login.css">
+    <link rel="stylesheet" href="assets/css/layout.css">
+    <link rel="stylesheet" href="assets/css/dashboard.css">
+    <link rel="stylesheet" href="assets/css/telas.css">
 </head>
 
 <body>
@@ -39,7 +40,7 @@
             </a>
 
             <div class="nav-section-title">GESTÃO</div>
-            <a href="cadastros.html" class="nav-item">
+            <a href="cadastros.html" class="nav-item active">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
                     <circle cx="8.5" cy="7" r="4"></circle>
@@ -48,7 +49,7 @@
                 </svg>
                 Cadastros
             </a>
-            <a href="atendimento-individual.html" class="nav-item active">
+            <a href="atendimento-individual.html" class="nav-item">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
                     <polyline points="14 2 14 8 20 8"></polyline>
@@ -58,14 +59,7 @@
                 </svg>
                 Atendimentos
             </a>
-            <a href="atendimento-grupo.html" class="nav-item" style="padding-left: 44px; font-size: 13px;">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    style="margin-right:8px; opacity:0.8; width:16px;">
-                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                    <circle cx="9" cy="7" r="4"></circle>
-                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-                </svg>
+            <a href="atendimento-grupo.html" class="nav-item " style="padding-left: 44px; font-size: 13px;">
                 Atend. em Grupo
             </a>
             <a href="encaminhamentos.html" class="nav-item">
@@ -86,7 +80,7 @@
                 Relatórios
             </a>
 
-            <a href="#" class="nav-item mt-auto" onclick="alert('Configurações Administrativas do sistema em breve.')">
+            <a href="configuracoes.html" class="nav-item mt-auto">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <circle cx="12" cy="12" r="3"></circle>
                     <path
@@ -99,97 +93,80 @@
 
         <div class="main-wrapper">
             <header class="topbar">
-                <div style="font-size: 20px; font-weight: 700;">Atendimento Individual</div>
-                <div style="display: flex; align-items: center; gap: 16px;">
-                    <div class="search-bar" style="width: 300px;">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--text-placeholder)"
-                            stroke-width="2">
-                            <circle cx="11" cy="11" r="8"></circle>
-                            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                        </svg>
-                        <input type="text" placeholder="Pesquisar...">
-                    </div>
-                    <button id="btnAbrirModal"
-                        style="background-color: var(--primary); color: white; border: none; padding: 10px 16px; border-radius: 6px; font-weight: 600; cursor: pointer; display: flex; align-items: center; gap: 8px;">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2">
-                            <path d="M12 5v14M5 12h14"></path>
-                        </svg>
-                        Novo Beneficiário
-                    </button>
-                    <button class="icon-btn">
+                <div class="search-bar" style="visibility:hidden"></div>
+                <div class="topbar-actions">
+                    <button class="icon-btn" onclick="window.Auth.logout()" title="Sair do Sistema">
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                             stroke-width="2">
-                            <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
-                            <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+                            <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+                            <polyline points="16 17 21 12 16 7"></polyline>
+                            <line x1="21" y1="12" x2="9" y2="12"></line>
                         </svg>
                     </button>
+
+                    <div class="user-profile">
+                        <div class="user-info">
+                            <span class="user-name" id="topbarUserName">Carregando...</span>
+                            <span class="user-role" id="topbarUserRole">Admin</span>
+                        </div>
+                        <div class="user-avatar" id="topbarUserAvatar"
+                            style="background-color: #0D8ABC; color: white; display: flex; align-items: center; justify-content: center; font-weight: bold;">
+                            AD
+                        </div>
+                    </div>
                 </div>
             </header>
 
             <main class="content-area">
-
-                <div class="filter-bar"
-                    style="background: white; border: 1px solid var(--border-color); padding: 16px 24px; border-radius: 12px; margin-bottom: 24px;">
-                    <div class="filter-group">
-                        <label>TÉCNICO RESPONSÁVEL</label>
-                        <select class="filter-input">
-                            <option>Todos os técnicos</option>
-                        </select>
+                <div class="target-header"
+                    style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 24px;">
+                    <div>
+                        <h1 style="color:var(--text-main); font-size:24px; margin-bottom:8px;">Base de Cadastros Ativos
+                        </h1>
+                        <p style="color:var(--text-muted);">Listagem de Munícipes Beneficiários inseridos no
+                            acompanhamento SigaS.</p>
                     </div>
-                    <div class="filter-group">
-                        <label>STATUS</label>
-                        <select class="filter-input">
-                            <option>Todos</option>
-                        </select>
-                    </div>
-                    <div class="filter-group">
-                        <label>BAIRRO</label>
-                        <select class="filter-input">
-                            <option>Todos os bairros</option>
-                        </select>
-                    </div>
-                    <div class="filter-group">
-                        <label>PERÍODO</label>
-                        <input type="date" class="filter-input" placeholder="Últimos 30 dias">
-                    </div>
-                    <div class="filter-actions" style="margin-left: auto;">
-                        <button class="btn-outline" style="height: 40px; margin-top: 24px;">≡ Mais Filtros</button>
-                    </div>
+                    <button class="btn-apply" id="btnAbrirModal"
+                        style="background: var(--primary); color: white; border: none; padding: 10px 20px; border-radius: 6px; font-weight: 600; cursor: pointer;">
+                        + Novo Cadastro
+                    </button>
                 </div>
 
-                <div class="table-container"
-                    style="background: white; border: 1px solid var(--border-color); border-radius: 12px; overflow: hidden;">
-                    <table class="data-table" style="width: 100%; border-collapse: collapse;">
-                        <thead>
-                            <tr
-                                style="border-bottom: 1px solid var(--border-color); color: var(--text-muted); font-size: 11px; text-transform: uppercase;">
-                                <th style="padding: 16px 24px; text-align: left;">BENEFICIÁRIO</th>
-                                <th style="padding: 16px 24px; text-align: left;">CPF / NIS</th>
-                                <th style="padding: 16px 24px; text-align: left;">PRONTUÁRIO</th>
-                                <th style="padding: 16px 24px; text-align: left;">ÚLTIMO ATENDIMENTO</th>
-                                <th style="padding: 16px 24px; text-align: left;">TÉCNICO</th>
-                                <th style="padding: 16px 24px; text-align: left;">STATUS</th>
-                                <th style="padding: 16px 24px; text-align: center;">AÇÕES</th>
-                            </tr>
-                        </thead>
-                        <tbody id="tabelaBeneficiarios">
-                            <!-- Injetado por main.js -->
-                        </tbody>
-                    </table>
-
-                    <div
-                        style="padding: 16px 24px; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border-color);">
-                        <span style="font-size: 13px; color: var(--text-muted);">Mostrando beneficiários
-                            carregados</span>
-                        <div style="display: flex; gap: 8px;">
-                            <button
-                                style="border: 1px solid var(--border-color); background: white; width: 32px; height: 32px; border-radius: 4px;">&lt;</button>
-                            <button
-                                style="border: none; background: var(--primary); color: white; width: 32px; height: 32px; border-radius: 4px; font-weight: bold;">1</button>
-                            <button
-                                style="border: 1px solid var(--border-color); background: white; width: 32px; height: 32px; border-radius: 4px;">&gt;</button>
-                        </div>
+                <div class="panel">
+                    <div style="overflow-x:auto;">
+                        <table class="w-full" style="width: 100%; border-collapse: collapse;">
+                            <thead>
+                                <tr>
+                                    <th
+                                        style="text-align: left; padding: 12px 16px; background: #f9fafb; color: var(--text-muted); font-size: 12px; font-weight: 600; text-transform: uppercase; border-bottom: 1px solid var(--border-color);">
+                                        Beneficiário Responsável</th>
+                                    <th
+                                        style="text-align: left; padding: 12px 16px; background: #f9fafb; color: var(--text-muted); font-size: 12px; font-weight: 600; text-transform: uppercase; border-bottom: 1px solid var(--border-color);">
+                                        Documentoação</th>
+                                    <th
+                                        style="text-align: left; padding: 12px 16px; background: #f9fafb; color: var(--text-muted); font-size: 12px; font-weight: 600; text-transform: uppercase; border-bottom: 1px solid var(--border-color);">
+                                        Prontuário (PAIF)</th>
+                                    <th
+                                        style="text-align: left; padding: 12px 16px; background: #f9fafb; color: var(--text-muted); font-size: 12px; font-weight: 600; text-transform: uppercase; border-bottom: 1px solid var(--border-color);">
+                                        Data Atendimento</th>
+                                    <th
+                                        style="text-align: left; padding: 12px 16px; background: #f9fafb; color: var(--text-muted); font-size: 12px; font-weight: 600; text-transform: uppercase; border-bottom: 1px solid var(--border-color);">
+                                        Resp. Técnico</th>
+                                    <th
+                                        style="text-align: left; padding: 12px 16px; background: #f9fafb; color: var(--text-muted); font-size: 12px; font-weight: 600; text-transform: uppercase; border-bottom: 1px solid var(--border-color);">
+                                        Status</th>
+                                    <th
+                                        style="text-align: center; padding: 12px 16px; background: #f9fafb; color: var(--text-muted); font-size: 12px; font-weight: 600; text-transform: uppercase; border-bottom: 1px solid var(--border-color);">
+                                        Ação</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tabelaBeneficiarios">
+                                <tr>
+                                    <td colspan="7" style="text-align:center; padding: 24px; color: var(--text-muted);">
+                                        Carregando Base...</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
 
@@ -197,7 +174,7 @@
         </div>
     </div>
 
-    <!-- Modal Novo Beneficiário -->
+
     <div class="modal-overlay" id="modalNovoBeneficiario">
         <div class="modal-content" style="max-width: 600px; max-height: 90vh; overflow-y: auto;">
 
@@ -255,17 +232,25 @@
                         </div>
                     </div>
 
-                    <h3 class="form-section-title">3. Situação Socioeconômica</h3>
+                    <h3 class="form-section-title">3. Perfil Socieconômico</h3>
                     <div class="form-grid">
                         <div class="form-group">
                             <label>Situação de Trabalho</label>
                             <select id="trabalhoInput">
                                 <option value="">Selecione...</option>
-                                <option value="Empregado Formal">Empregado Formal</option>
-                                <option value="Informal / Autônomo">Informal / Autônomo</option>
+                                <option value="Autônomo">Autônomo</option>
+                                <option value="CLT">Trabalho Formal (CLT)</option>
                                 <option value="Desempregado">Desempregado</option>
-                                <option value="Aposentado/Pensionista">Aposentado/Pensionista</option>
+                                <option value="Aposentado">Aposentado / Pensionista</option>
                             </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Composição Familiar (Qtd)</label>
+                            <input type="number" placeholder="Ex: 4">
+                        </div>
+                        <div class="form-group full-width">
+                            <label>Observações Iniciais</label>
+                            <textarea rows="3" placeholder="Situação de vulnerabilidade identificada..."></textarea>
                         </div>
                     </div>
 
@@ -273,16 +258,19 @@
             </div>
 
             <div class="modal-footer">
-                <button type="button" class="btn-outline" id="btnCancelarModal">Cancelar</button>
-                <button type="submit" class="btn-apply" form="formNovoBeneficiario">Salvar Cadastro</button>
+                <button class="btn-outline" id="btnCancelarModal">Cancelar</button>
+                <button class="btn-apply" form="formNovoBeneficiario" type="submit">Finalizar Cadastro</button>
             </div>
 
         </div>
     </div>
 
     <script src="assets/js/layout.js"></script>
-    <script src="./assets/js/auth.js"></script>
-    <script src="./assets/js/main.js"></script>
+    <script src="assets/js/auth.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/dashboard_stats.js"></script>
+    <script src="assets/js/beneficiarios_list.js"></script>
+    <script src="assets/js/grupos_list.js"></script>
 </body>
 
 </html>

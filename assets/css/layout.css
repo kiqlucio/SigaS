@@ -1,11 +1,46 @@
 /* assets/css/layout.css */
 
+body.dark-mode {
+    --bg-page: #1F2937;    /* Gray 800 */
+    --bg-card: #374151;    /* Gray 700 */
+    --text-main: #F9FAFB;  /* Gray 50 */
+    --text-muted: #9CA3AF; /* Gray 400 */
+    --text-label: #E5E7EB; /* Gray 200 */
+    --text-placeholder: #6B7280; /* Gray 500 */
+    --border-color: #4B5563; /* Gray 600 */
+}
+
+/* OVERRIDES: Evitar fundo branco inline de tabelas, painéis e ths vazando no modo escuro */
+body.dark-mode table th,
+body.dark-mode table td {
+    background-color: var(--bg-card) !important;
+    color: var(--text-label) !important;
+}
+body.dark-mode .panel,
+body.dark-mode .modal-content {
+    background-color: var(--bg-card) !important;
+    color: var(--text-main) !important;
+}
+body.dark-mode .metric-card {
+    background-color: var(--bg-card) !important;
+    color: var(--text-main) !important;
+}
+
 /* Estrutura principal dividindo a tela */
 .app-container {
     display: flex;
     height: 100vh;
     background-color: var(--bg-page);
     overflow: hidden;
+}
+
+/* Base global UX transitions */
+a, button, input, select, .nav-item, .metric-card, .btn-apply, .btn-secondary {
+    transition: all 0.3s ease;
+}
+
+button:active, .nav-item:active {
+    transform: scale(0.98);
 }
 
 /* Sidebar (Menu Lateral) */
@@ -183,4 +218,62 @@
     border-radius: 50%;
     object-fit: cover;
     background-color: #D1D5DB;
+}
+
+/* =======================================
+   TOGGLE SWITCH (DARK MODE)
+   ======================================= */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 44px;
+  height: 24px;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--border-color);
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: var(--primary);
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px var(--primary);
+}
+
+input:checked + .slider:before {
+  transform: translateX(20px);
+}
+
+.slider.round {
+  border-radius: 24px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
 }

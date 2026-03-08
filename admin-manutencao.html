@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SigaS - Administração Remota</title>
+    <link rel="stylesheet" href="assets/css/layout.css">
+    <style>
+        body {
+            background-color: var(--bg-page);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+            transition: all 0.3s ease;
+        }
+
+        .admin-container {
+            background: var(--bg-card);
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 500px;
+            text-align: center;
+            border: 1px solid var(--border-color);
+        }
+
+        .header h1 {
+            color: var(--text-main);
+            margin-bottom: 8px;
+            font-size: 28px;
+        }
+
+        .header p {
+            color: var(--text-muted);
+            margin-bottom: 32px;
+            font-size: 14px;
+        }
+
+        .status-box {
+            background: var(--bg-page);
+            padding: 20px;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            margin-bottom: 24px;
+            text-align: left;
+        }
+
+        .status-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 12px;
+            font-size: 14px;
+        }
+
+        .status-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .status-label {
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        .status-value {
+            color: var(--text-main);
+            font-weight: 600;
+        }
+
+        .maintenance-toggle {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px;
+            background: rgba(239, 68, 68, 0.05);
+            border: 1px solid rgba(239, 68, 68, 0.2);
+            border-radius: 12px;
+            margin-bottom: 24px;
+        }
+
+        .maintenance-labels {
+            text-align: left;
+        }
+
+        .maintenance-title {
+            color: #EF4444;
+            font-weight: 600;
+            margin-bottom: 4px;
+            display: block;
+        }
+
+        .maintenance-desc {
+            font-size: 12px;
+            color: var(--text-muted);
+        }
+
+        /* Toggle Switch from layout.css adaptation */
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 50px;
+            height: 28px;
+        }
+
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .switch .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: var(--border-color);
+            transition: .4s;
+            border-radius: 34px;
+        }
+
+        .switch .slider:before {
+            position: absolute;
+            content: "";
+            height: 20px;
+            width: 20px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            transition: .4s;
+            border-radius: 50%;
+        }
+
+        .switch input:checked+.slider {
+            background-color: #EF4444;
+        }
+
+        .switch input:checked+.slider:before {
+            transform: translateX(22px);
+        }
+
+        .btn-return {
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: 600;
+            width: 100%;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-return:hover {
+            opacity: 0.9;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="admin-container">
+        <div class="header">
+            <h1>SigaS Admin Panel</h1>
+            <p>Controle Remoto do Servidor & Manutenção</p>
+        </div>
+
+        <div class="status-box">
+            <div class="status-item">
+                <span class="status-label">Uptime do Servidor</span>
+                <span class="status-value" id="sysUptime">Carregando...</span>
+            </div>
+            <div class="status-item">
+                <span class="status-label">Memória Usada / Total</span>
+                <span class="status-value" id="sysMemory">... / ...</span>
+            </div>
+            <div class="status-item">
+                <span class="status-label">Versão do Node</span>
+                <span class="status-value" id="sysNode">Carregando...</span>
+            </div>
+        </div>
+
+        <div class="maintenance-toggle">
+            <div class="maintenance-labels">
+                <span class="maintenance-title">Modo de Manutenção</span>
+                <span class="maintenance-desc">Bloquear acesso geral à plataforma</span>
+            </div>
+            <label class="switch">
+                <input type="checkbox" id="toggleMaintenance">
+                <span class="slider"></span>
+            </label>
+        </div>
+
+        <button class="btn-return" onclick="window.location.href='dashboard.html'">
+            Voltar para o Dashboard
+        </button>
+    </div>
+
+    <!-- Need Auth functions and layout scripts -->
+    <script src="assets/js/layout.js"></script>
+    <script src="assets/js/auth.js"></script>
+    <script src="assets/js/admin.js"></script>
+</body>
+
+</html>
+
