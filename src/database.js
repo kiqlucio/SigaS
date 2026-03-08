@@ -8,15 +8,15 @@ const db = new sqlite3.Database(dbPath, (err) => {
     if (err) {
         console.error('Erro ao conectar ao banco de dados SQLite:', err.message);
     } else {
-        console.log('Conectado ao banco de dados SQLite.');
-        db.run('PRAGMA foreign_keys = ON'); // Enable foreign keys
+        console.log('Banco de dados pronto.');
+        db.run('PRAGMA foreign_keys = ON');
         initDatabase();
     }
 });
 
 function initDatabase() {
     db.serialize(() => {
-        // Tabela de Usuários (Técnicos, Admins, etc)
+        // Usuários do sistema
         db.run(`
             CREATE TABLE IF NOT EXISTS usuarios (
                 id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -32,7 +32,7 @@ function initDatabase() {
             else insertDefaultUser();
         });
 
-        // Tabela de Beneficiários Individuais
+        // Beneficiários
         db.run(`
             CREATE TABLE IF NOT EXISTS beneficiarios (
                 id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -51,7 +51,7 @@ function initDatabase() {
             )
         `);
 
-        // Tabela de Atendimentos Individuais
+        // Atendimentos Individuais
         db.run(`
             CREATE TABLE IF NOT EXISTS atendimentos (
                 id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -153,7 +153,7 @@ function initDatabase() {
     });
 }
 
-// Inserir usuário padrão para testes (admin@sigas.com / admin123)
+// Cria o admin inicial se não existir
 function insertDefaultUser() {
     db.get("SELECT id FROM usuarios WHERE email = ?", ['admin@sigas.com'], async (err, row) => {
         if (!row) {
